@@ -1,0 +1,37 @@
+{
+  "delimiter": "_",
+  "components": [
+    {
+      "name": "channel",
+      "required": true,
+      "allowed_values": ["meta", "google", "tiktok"],
+      "aliases": {"facebook": "meta", "fb": "meta", "ggl": "google"}
+    },
+    {
+      "name": "market",
+      "required": true,
+      "allowed_values": ["us", "uk", "de", "fr"],
+      "aliases": {"usa": "us", "unitedstates": "us", "germany": "de"}
+    },
+    {
+      "name": "objective",
+      "required": true,
+      "allowed_values": ["awareness", "traffic", "conversion"],
+      "aliases": {"conv": "conversion", "conversions": "conversion"}
+    },
+    {
+      "name": "audience",
+      "required": false,
+      "allowed_values": ["prospecting", "retargeting"],
+      "aliases": {"retarget": "retargeting"},
+      "default": "prospecting"
+    }
+  ],
+  "platform_field_mappings": {
+    "meta": {
+      "campaign": "name",
+      "adset": "name",
+      "ad": "name"
+    }
+  }
+}
